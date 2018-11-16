@@ -1,0 +1,29 @@
+.mat-toolbar{
+    background: #084c61;
+   // color: #db3a34;
+   color: #fff;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+}
+
+.mat-card{
+    background: #323031;
+    margin-top: 25px;
+}
+
+input{
+    color:#fff;
+    background: #323031 !important;
+}
+/deep/ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+    background: #323031  !important;
+}
+.error{
+    color:red;
+    margin-left: 15px;
+    margin-top: -18px;
+}
+/deep/ .mat-form-field-appearance-legacy .mat-form-field-label{
+    color: #fff;
+    font-size: 14px;
+}

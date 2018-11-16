@@ -1,0 +1,55 @@
+<div class="col-lg-12">
+    <mat-toolbar>C-Panel</mat-toolbar>
+</div>
+
+<section class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8">
+          <mat-card>
+            <form [formGroup]="itemform">
+               <mat-form-field class="col-lg-12">
+                <input matInput formControlName="iname" #item_name placeholder="Item Name">
+               </mat-form-field>
+               
+                
+              <mat-form-field class="col-lg-12">
+                  <input matInput  formControlName="iQuan" #item_quan placeholder="Item Quantity">
+               </mat-form-field>
+               
+               <mat-form-field class="col-lg-12">
+                  <input matInput #item_price formControlName="iprice" placeholder="Price Per Item *INR">
+               </mat-form-field>
+               <mat-form-field class="col-lg-12">
+                  <input matInput placeholder="Purchased Date">
+               </mat-form-field>
+               <div class="error">
+                  {{errMsg}}
+                </div>
+                  
+               <div class="row">
+               <div class="col-lg-6 text-center">
+                  <button mat-raised-button color="primary" (click)="addItem()">Add</button>
+               </div>
+               <div class="col-lg-6 text-center">
+                  <button mat-raised-button color="primary">Clear</button>
+                </div>
+              </div>
+               
+            </form>
+          </mat-card>
+      </div>
+      <div class="col-lg-4">
+        <div *ngFor="let data of getData; let i = index;">
+          <div *ngIf="data.itemName == 'cake'" (change)="tot($event)">
+             {{i}} {{data.itemName}} {{data.itemQuan }}
+             
+           
+          </div>
+        
+
+  
+        </div>
+    </div>
+    </div>
+  
+  </section>
